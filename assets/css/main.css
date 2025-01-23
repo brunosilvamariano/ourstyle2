@@ -5,27 +5,27 @@
     --cor-menu: #353535; /* Cor de fundo do menu, cinza escuro */
     
     /* Cores de texto */
-    --cor-texto-principal: #353535; /* Branco para o texto principal */
-    --cor-texto-secundario: #353535; /* Cinza claro para textos secundários */
+    --cor-texto-principal: #ffffff; /* Branco para o texto principal */
+    --cor-texto-secundario: #ffffff; /* Cinza claro para textos secundários */
     
     /* Cores de interação e destaque */
-    --cor-hover: #bdc3c7; /* Vermelho suave para hover e interações */
-    --cor-erro: #bdc3c7; /* Vermelho suave para mensagens de erro */
-    --cor-sucesso: #bdc3c7; /* Vermelho suave para mensagens de sucesso */
+    --cor-hover: #ffffff; /* Vermelho suave para hover e interações */
+    --cor-erro: #ffffff; /* Vermelho suave para mensagens de erro */
+    --cor-sucesso: #ffffff; /* Vermelho suave para mensagens de sucesso */
     
     /* Cores complementares */
-    --cor-cinza-claro: #7f8c8d; /* Cinza médio */
-    --cor-cinza-escuro: #4d5656; /* Cinza escuro */
-    --cor-cinza-muito-escuro: #3b3b3b; /* Cinza muito escuro */
-    --cor-cinza-gelo: #95a5a6; /* Cinza claro */
+    --cor-cinza-claro: #ffffff; /* Cinza médio */
+    --cor-cinza-escuro: #ffffff; /* Cinza escuro */
+    --cor-cinza-muito-escuro: #ffffff; /* Cinza muito escuro */
+    --cor-cinza-gelo: #ffffff; /* Cinza claro */
     
     /* Cores de elementos destacados */
     --cor-titulo: #ffffff; /* Cor de título */
-    --cor-subtitulo: #bdc3c7; /* Cor de subtítulo */
-    --cor-paragrafo: #bdc3c7; /* Cor de parágrafos */
+    --cor-subtitulo: #ffffff; /* Cor de subtítulo */
+    --cor-paragrafo: #ffffff; /* Cor de parágrafos */
     
     /* Cores de botões */
-    --cor-botao-fundo: #bdc3c7; /* Fundo de botões */
+    --cor-botao-fundo: #ffffff; /* Fundo de botões */
     --cor-botao-borda: #ffffff; /* Borda de botões */
     --cor-botao-texto: #ffffff; /* Texto de botões */
     --cor-botao-hover: #000000; /* Cor de texto no hover do botão */
@@ -126,36 +126,27 @@ h3 {
 }
 
 /* Seção Home */
-/* Melhoria para o Carousel */
+/* Seção Home */
 #homeCarousel {
     position: relative;
     height: 100vh; /* A altura ocupa toda a tela */
 }
 
 .carousel-item {
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    object-fit: cover; /* Para garantir que a imagem cubra toda a tela */
-}
-
-.carousel-inner {
     position: relative;
-    width: 100%;
-    height: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    object-fit: cover; /* Para garantir que a imagem cubra toda a tela sem distorções */
 }
 
-.carousel-item img {
+/* Conteúdo sobre o banner */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorções */
-    border-radius: 10px; /* Bordas arredondadas nas imagens */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Sombra sutil ao redor da imagem */
-}
-
-/* Adicionando efeito de fade no carousel */
-.carousel-item-next,
-.carousel-item-prev,
-.carousel-item.active {
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 /* Título */
@@ -170,35 +161,13 @@ h3 {
 
 /* Descrição */
 .description {
-    font-size: 1.5rem;
+    font-size: 1.7rem !important;
     color: var(--cor-texto-secundario);
     margin-top: 20px;
     line-height: 1.6;
+    letter-spacing: 0.5px;
     opacity: 0.8;
     animation: fadeIn 2s ease-out; /* Animação da descrição */
-}
-
-/* Animação de fadeIn do título e descrição */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Botão de WhatsApp */
@@ -207,9 +176,9 @@ h3 {
     align-items: center;
     background-color: var(--cor-primaria);
     color: var(--cor-texto-principal);
-    padding: 12px 20px;
+    padding: 10px 18px;
     border-radius: 50px;
-    border: none;
+    border: 2px solid var(--cor-texto-principal);
     font-weight: 600;
     font-size: 1.1rem;
     text-decoration: none;
@@ -227,30 +196,18 @@ h3 {
     margin-right: 10px;
 }
 
-/* Efeito de scroll */
-.scroll-button {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: var(--cor-primaria);
-    animation: pulse 2s infinite; /* Animação para indicar o scroll */
-}
-
-.scroll-button:hover {
-    color: var(--cor-hover);
-}
-
-/* Animação de pulsação */
-@keyframes pulse {
-    0% {
-        transform: translateX(-50%) scale(1);
+/* Responsividade - Ajuste para telas menores */
+@media (max-width: 768px) {
+    #home-title {
+        font-size: 2.5rem; /* Ajusta o tamanho do título */
     }
-    50% {
-        transform: translateX(-50%) scale(1.1);
+
+    .description {
+        font-size: 1.2rem; /* Ajusta o tamanho da descrição */
     }
-    100% {
-        transform: translateX(-50%) scale(1);
+
+    .btn-custom {
+        font-size: 1rem; /* Ajusta o tamanho do botão */
+        padding: 10px 18px;
     }
 }
