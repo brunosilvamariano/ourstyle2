@@ -385,13 +385,13 @@ h3 {
 }
 
 #pricing .btn-outline-dark {
-    border: 2px solid #000;
+    border: 2px solid var(--cor-menu);
     color: #000;
     background-color: transparent;
 }
 
 #pricing .btn-outline-dark:hover {
-    background-color: #000;
+    background: var(--cor-menu);
     color: #fff;
 }
 
@@ -420,7 +420,7 @@ h3 {
     font-size: 1.3rem;
 }
 
-/**********************************************8Galeria de fotos**************************************************88*/
+/**********************************************Galeria de fotos***************************************************/
 /* Estilo da seção Galeria */
 #gallery{
     background: var(--cor-menu);
@@ -508,4 +508,73 @@ h3 {
     #gallery .before-after-container {
         height: 200px;
     }
+}
+
+/********************************************** SOBRE ***************************************************/
+#barber-shop {
+    background-color: #f8f9fa;
+}
+
+#barber-shop .carousel-inner {
+    position: relative;
+}
+
+#barber-shop .carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px; /* Imagem principal */
+}
+
+.carousel-thumbnails img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.carousel-thumbnails img:hover {
+    transform: scale(1.1);
+    border-color: #000;
+}
+
+.carousel-thumbnails {
+    gap: 15px;
+}
+
+.carousel-thumbnails img.active {
+    border-color: #007bff;
+}
+
+#about h3{
+    color: var(--cor-botao-texto)!important;
+}
+
+
+#about .btn {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 0 0 15px 15px; /* Bordas arredondadas no fundo */
+}
+
+#about .card .list-unstyled li {
+    margin: 15px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#about .btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animações no botão */
+}
+
+#about .btn:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    background: var(--cor-menu);
 }
