@@ -422,21 +422,28 @@ h3 {
 
 /**********************************************8Galeria de fotos**************************************************88*/
 /* Estilo da seção Galeria */
+#gallery{
+    background: var(--cor-menu);
+}
 #gallery h2 {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
     font-size: 2rem;
-    color: #000;
+    color: #fff;
     text-align: center;
     margin-bottom: 30px; /* Espaço abaixo do título */
+}
+
+#gallery .text-muted{
+    color: #fff !important;
 }
 
 #gallery h2::after {
     content: '';
     width: 50px;
     height: 3px;
-    background-color: #000;
+    background-color: #fff;
     position: absolute;
     bottom: 0;
     left: 50%;
