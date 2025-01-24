@@ -535,36 +535,35 @@ h3 {
     border-radius: 8px;
 }
 
+/* Efeito ao passar o mouse nas miniaturas */
 .carousel-thumbnails img:hover {
     transform: scale(1.1);
     border-color: #000;
 }
 
+/* Responsividade para a galeria de miniaturas */
 .carousel-thumbnails {
     gap: 15px;
+    overflow-x: auto; /* Permite rolar as miniaturas horizontalmente */
 }
 
 .carousel-thumbnails img.active {
     border-color: #007bff;
 }
 
-#about h3{
+/* Estilo do botão na seção */
+#about h3 {
     color: var(--cor-botao-texto)!important;
 }
 
-
 #about .btn {
     padding: 15px;
+    margin-bottom: 15px;
     background-color: #f1f1f1;
     border-radius: 0 0 15px 15px; /* Bordas arredondadas no fundo */
 }
 
-#about .card .list-unstyled li {
-    margin: 15px 0;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
+/* Estilo do botão em dispositivos menores */
 #about .btn {
     padding: 12px 30px;
     border-radius: 25px;
@@ -574,7 +573,40 @@ h3 {
     transition: background-color 0.3s ease, transform 0.3s ease; /* Animações no botão */
 }
 
+/* Efeito ao passar o mouse sobre o botão */
 #about .btn:hover {
     transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
     background: var(--cor-menu);
+}
+
+/* Responsividade: Ajuste da altura das imagens principais */
+@media (max-width: 768px) {
+    #barber-shop .carousel-item img {
+        height: 300px; /* Ajustando a altura da imagem principal em telas médias */
+    }
+
+    .carousel-thumbnails img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .carousel-thumbnails {
+        gap: 10px;
+    }
+}
+
+/* Para dispositivos móveis (telas muito pequenas) */
+@media (max-width: 576px) {
+    #barber-shop .carousel-item img {
+        height: 250px; /* Ajustando a altura da imagem principal em telas muito pequenas */
+    }
+
+    .carousel-thumbnails img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .carousel-thumbnails {
+        gap: 5px;
+    }
 }
