@@ -236,7 +236,7 @@ h3 {
 /* Estilização da seção "Nossos Serviços" */
 .services-section {
     padding: 60px 20px; /* Espaçamento interno da seção */
-    background: linear-gradient(120deg, #f7f7f7, #e3e3e3); /* Fundo com gradiente sutil */
+    background: var(--cor-fundo); /* Fundo com gradiente sutil */
     color: #333; /* Cor padrão do texto */
 }
 
@@ -330,3 +330,93 @@ h3 {
         margin-bottom: 20px; /* Espaço extra em telas pequenas */
     }
 }
+/*******************************************************Preços******************************************************/
+/* Estilo geral da seção */
+#pricing {
+    background-color: #f8f9fa; /* Cor de fundo clara para a seção */
+    padding: 60px 0;
+}
+
+#pricing .card {
+    border: none;
+    border-radius: 15px; /* Bordas arredondadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves para animação */
+}
+
+#pricing .card:hover {
+    transform: translateY(-10px); /* Elevação do card ao passar o mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+#pricing .card-header {
+    border-radius: 15px 15px 0 0; /* Bordas arredondadas no topo do card */
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#pricing .card-body {
+    padding: 30px;
+}
+
+#pricing .card-footer {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 0 0 15px 15px; /* Bordas arredondadas no fundo */
+}
+
+#pricing .card .list-unstyled li {
+    margin: 15px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#pricing .btn {
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animações no botão */
+}
+
+#pricing .btn:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+#pricing .btn-outline-dark {
+    border: 2px solid #000;
+    color: #000;
+    background-color: transparent;
+}
+
+#pricing .btn-outline-dark:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#pricing .btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+}
+
+#pricing .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Adicionar ícones para os serviços */
+#pricing .card-body li {
+    display: flex;
+    align-items: center;
+}
+
+#pricing .card-body li::before {
+    content: "\f2c0"; /* Ícone de tesoura */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
