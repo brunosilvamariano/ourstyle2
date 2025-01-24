@@ -525,37 +525,43 @@ h3 {
     height: 400px; /* Imagem principal */
 }
 
+/* Estilo das miniaturas */
+.carousel-thumbnails {
+    display: flex; /* Exibe as miniaturas em linha */
+    gap: 10px; /* Espaçamento entre as miniaturas */
+    overflow-x: auto; /* Permite rolar as miniaturas horizontalmente */
+    padding: 10px 0; /* Adiciona espaçamento acima e abaixo das miniaturas */
+    justify-content: center; /* Centraliza as miniaturas */
+    scroll-snap-type: x mandatory; /* Alinha as miniaturas ao rolar */
+    max-width: 100%; /* Impede que as miniaturas saiam da tela */
+}
+
 .carousel-thumbnails img {
     width: 100px;
     height: 100px;
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease;
-    border: 2px solid #ccc;
+    
     border-radius: 8px;
+    scroll-snap-align: center; /* Força o alinhamento ao rolar */
 }
 
 /* Efeito ao passar o mouse nas miniaturas */
 .carousel-thumbnails img:hover {
-    transform: scale(1.1);
     border-color: #000;
-}
-
-/* Responsividade para a galeria de miniaturas */
-.carousel-thumbnails {
-    gap: 15px;
-    overflow-x: auto; /* Permite rolar as miniaturas horizontalmente */
 }
 
 .carousel-thumbnails img.active {
     border-color: #007bff;
 }
 
-/* Estilo do botão na seção */
+/* Estilo do título na seção */
 #about h3 {
     color: var(--cor-botao-texto)!important;
 }
 
+/* Estilo do botão na seção */
 #about .btn {
     padding: 15px;
     margin-bottom: 15px;
