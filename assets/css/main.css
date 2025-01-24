@@ -232,3 +232,101 @@ h3 {
 .navbar-toggler {
     background-color: #fff;
 }
+/*******************************************************SERVIÇOS******************************************************/
+/* Estilização da seção "Nossos Serviços" */
+.services-section {
+    padding: 60px 20px; /* Espaçamento interno da seção */
+    background: linear-gradient(120deg, #f7f7f7, #e3e3e3); /* Fundo com gradiente sutil */
+    color: #333; /* Cor padrão do texto */
+}
+
+/* Título da seção */
+.services-section h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 2rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 30px; /* Espaço abaixo do título */
+}
+
+.services-section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Cards de serviços */
+.services-section .card {
+    border: none; /* Remove bordas padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que a imagem respeite o radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito de transição suave */
+    margin-bottom: 20px; /* Espaço inferior para alinhamento em telas menores */
+}
+
+.services-section .card:hover {
+    transform: translateY(-5px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais forte no hover */
+}
+
+.services-section .card-img-top {
+    height: 200px;
+    object-fit: cover; /* Garante que as imagens fiquem ajustadas ao container */
+    border-bottom: 3px solid #000; /* Destaque na parte inferior da imagem */
+}
+
+.services-section .card-title {
+    font-size: 1.25rem;
+    color: #333; /* Cor mais elegante para títulos */
+    font-weight: bold;
+    text-align: center; /* Centraliza o título */
+}
+
+.services-section .card-text {
+    color: #666; /* Texto descritivo com cor mais suave */
+    font-size: 0.95rem;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Botão personalizado */
+.services-section .btn-custom {
+    padding: 12px 30px; /* Botão maior para chamar mais atenção */
+    font-size: 1rem; /* Texto maior */
+    border-radius: 50px; /* Formato arredondado */
+    border: 2px solid #000; /* Borda visível */
+    background-color: transparent !important;
+    color: #000 !important;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efeito de transição suave */
+    display: block;
+    margin: 20px auto 0; /* Centraliza o botão e dá espaço superior */
+    width: fit-content;
+}
+
+.services-section .btn-custom:hover {
+    background-color: var(--cor-botao-texto) !important; /* Fundo preto no hover */
+    color: #fff !important; /* Texto branco no hover */
+    border: 2px solid var(--cor-botao-texto); /* Borda permanece */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-section h2 {
+        font-size: 1.75rem; /* Ajusta o tamanho do título */
+    }
+
+    .services-section .btn-custom {
+        width: 100%; /* Botão ocupa toda a largura em telas menores */
+        font-size: 1rem;
+    }
+
+    .services-section .card {
+        margin-bottom: 20px; /* Espaço extra em telas pequenas */
+    }
+}
