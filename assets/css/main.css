@@ -633,3 +633,53 @@ h3 {
 }
 
 /********************************************** FAQ ***************************************************/
+.footer {
+    background-color: #111; /* Fundo escuro */
+    color: #bbb; /* Texto em tom claro */
+    font-size: 0.9rem;
+    padding: 40px 0;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    color: #fff; /* Destaque no título */
+    margin-bottom: 20px;
+}
+
+.footer a {
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer .fab {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .fab:hover {
+    color: var(--cor-sucesso); /* Cor para hover nos ícones */
+}
+
+/* Assinatura do cliente */
+.footer-signature {
+    max-width: 150px;
+    margin-top: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-signature:hover {
+    opacity: 1;
+}
+
+/* Mapa responsivo */
+.footer iframe {
+    border-radius: 8px;
+    border: none;
+}
+
